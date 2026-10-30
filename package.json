@@ -1,0 +1,8 @@
+{
+  "name": "nirait-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "נראית – PWA for postpartum depression screening, information and support (Hebrew, RTL)",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=16" }
+}
