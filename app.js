@@ -74,12 +74,14 @@
     { myth: 'זה סתם ״בייבי בלוז״, זה יעבור לבד.', truth: 'בייבי בלוז חולף בדרך כלל תוך כשבועיים. דיכאון אחרי לידה נמשך יותר זמן, כבד יותר, ומשתפר עם טיפול.' },
     { myth: 'אם אספר, יחשבו שאני לא מסוגלת לטפל בתינוק.', truth: 'פנייה לעזרה היא הורות אחראית. אנשי המקצוע רוצים לתמוך בך ובמשפחה שלך.' },
     { myth: 'זה באשמתי, אני צריכה פשוט להתאושש.', truth: 'דיכאון אחרי לידה נובע משילוב של גורמים ביולוגיים, היסטוריה אישית ונסיבות חיים. זו לא בחירה ולא חולשה.' },
-    { myth: 'רק נשים שילדו יכולות לחוות את זה.', truth: 'גם בני ובנות זוג והורים מאמצים יכולים לחוות דיכאון אחרי הגעת תינוק.' }
+    { myth: 'רק נשים שילדו יכולות לחוות את זה.', truth: 'גם בני ובנות זוג והורים מאמצים יכולים לחוות דיכאון אחרי הגעת תינוק.' },
+    { myth: 'זה נורמלי להיות בדיכאון בהריון.', truth: 'שינויים במצב הרוח בהריון נפוצים, אבל דיכאון בהריון הוא מצב רפואי שראוי לטיפול. דיכאון או חרדה בהריון הם גם מגורמי הסיכון החזקים לדיכאון אחרי לידה.' },
+    { myth: 'לדעת לטפל בתינוק זה משהו שבא לנשים באופן טבעי.', truth: 'הורות נלמדת, וכל אמא צריכה זמן ועזרה כדי ללמוד. קושי בהתחלה לא אומר שמשהו לא בסדר בך.' }
   ];
 
   const TIPS = [
     { title: 'לנוח כשאפשר', body: 'לחלק האכלות לילה או להתחלף, כדי לקבל רצף שינה ארוך אחד.' },
-    { title: 'להגיד כן לעזרה', body: 'רשימה קצרה של משימות שאנשים יכולים לעשות כשהם מציעים: ארוחה, כביסה, טיול עם התינוק.' },
+    { title: 'להגיד כן לעזרה', body: 'להכין רשימה קצרה: מי יכול לעזור ובמה (ארוחה, כביסה, טיול עם התינוק), ולמי מתקשרים ביום קשה.' },
     { title: 'לאכול משהו מזין', body: 'ארוחות קטנות ושתייה לאורך היום שומרות על אנרגיה יציבה יותר.' },
     { title: 'לצאת החוצה', body: 'כמה דקות של אור יום ואוויר צח יכולות לשפר את מצב הרוח.' },
     { title: 'לזוז בעדינות', body: 'הליכה קצרה או מתיחות נחשבות. בקצב של הגוף שלך.' },
@@ -269,6 +271,10 @@
             <a class="pill" href="tel:1800363363" style="background:#EEF1E4;color:#3E4A22"><span dir="ltr">1-800-363-363</span></a>
           </div>
         </div>
+        <div class="peach-box stack" style="gap:8px">
+          <h2 class="h3">לא בטוחה שזה ״מספיק רציני״?</h2>
+          <p class="p" style="font-size:15px;color:#3A2A30">במחקר אחד, שלוש מכל ארבע נשים עם תסמיני דיכאון לא ידעו אם מה שהן מרגישות הוא סיבה לבקש עזרה<sup>1</sup>. את לא צריכה להיות בטוחה. מספיק שמשהו מרגיש לא בסדר.</p>
+        </div>
         <div class="stack">
           <h2 class="label">דרכים נוספות לקבל עזרה</h2>
           <div class="list">
@@ -277,7 +283,20 @@
             <div><span class="bullet"></span><span><strong>מרפאות בריאות הנפש של קופת החולים.</strong> טיפול נפשי ניתן במסגרת סל הבריאות; בחלק מבתי החולים יש מרפאות ייעודיות לבריאות נפש האישה בהריון ואחרי לידה.</span></div>
             <div><span class="bullet"></span><span><strong>קבוצות תמיכה</strong> של אמהות, פנים אל פנים או ברשת, עם נשים שעברו את זה.</span></div>
           </div>
-        </div>`
+        </div>
+        <div class="stack">
+          <h2 class="label">לבני זוג, משפחה וחברים</h2>
+          <p class="p" style="font-size:15px">עידוד מבן או בת הזוג ומהקרובים הוא אחד הדברים שהכי עוזרים לנשים לפנות לטיפול<sup>1</sup>.</p>
+          <div class="list">
+            <div><span class="bullet"></span><span><strong>להקשיב בלי לשפוט.</strong> לשאול איך היא מרגישה באמת, ולהאמין לה.</span></div>
+            <div><span class="bullet"></span><span><strong>לא להרגיע בכוח.</strong> משפטים כמו ״זה נורמלי, את בסדר״ הם חלק ממה שמעכב נשים מלפנות לעזרה<sup>1</sup>.</span></div>
+            <div><span class="bullet"></span><span><strong>לעודד פנייה לאיש או אשת מקצוע.</strong> תמיכה של הקרובים חשובה, אבל לרוב לא מחליפה טיפול.</span></div>
+            <div><span class="bullet"></span><span><strong>להוריד חסמים מעשיים.</strong> לשמור על התינוק בזמן הפגישה, להסיע, לברר למי פונים.</span></div>
+          </div>
+        </div>
+        ${sources([
+          'Daehn D et al. Perinatal mental health literacy: knowledge, attitudes, and help-seeking among perinatal women and the public – a systematic review. BMC Pregnancy Childbirth. 2022;22:574.'
+        ])}`
     },
 
     information: {
@@ -287,16 +306,17 @@
         <img class="hero-img" src="images/info.jpg" alt="" style="height:130px">
         <section class="stack">
           <h2 class="h2">איך החברה רואה דיכאון אחרי לידה</h2>
-          <p class="p">דיכאון בתקופת ההריון ואחרי הלידה הוא מהסיבוכים השכיחים ביותר: כ־12% מהנשים חוות אותו<sup>1</sup>. ועדיין, מחקרים מראים שהציבור מתקשה לזהות את הסימנים, ושעמדות מסטיגמטיות כלפי אמהות עם קושי נפשי נפוצות<sup>2</sup>.</p>
+          <p class="p">דיכאון בתקופת ההריון ואחרי הלידה הוא מהסיבוכים השכיחים ביותר: כ־12% מהנשים חוות אותו<sup>1</sup>. ועדיין, מחקרים מראים שהציבור מתקשה לזהות את הסימנים, ושעמדות מסטיגמטיות כלפי אמהות עם קושי נפשי נפוצות<sup>2</sup>. בסקר אוסטרלי, כמחצית מהמשתתפים הסכימו ש״נורמלי להיות בדיכאון בהריון״, וכחמישית חשבו שלדעת לטפל בתינוק ״בא לנשים באופן טבעי״<sup>2</sup>.</p>
           <p class="p">הדימוי של ״האמא המאושרת״ גורם לנשים רבות להרגיש שמשהו לא בסדר דווקא בהן. בישראל, טיפות החלב מבצעות סינון לדיכאון אחרי לידה באופן שגרתי<sup>3</sup>, וזה צעד חשוב בהכרה בתופעה. מחקר ישראלי מצא שבתקופת מלחמה שיעור הדיכאון אחרי לידה הוכפל<sup>4</sup>: זה לא חולשה אישית, אלא תגובה למציאות קשה.</p>
         </section>
         <section class="stack" style="gap:12px">
           <h2 class="h2">למה נשים לא פונות לעזרה?</h2>
-          <p class="p">סקירות מחקר מצביעות על כמה חסמים חוזרים<sup>2,5,6</sup>:</p>
+          <p class="p">רק כ־6% מהנשים עם דיכאון אחרי לידה מקבלות טיפול מתאים, ובמרבית המחקרים פחות מ־40% מהנשים מתכוונות לפנות לעזרה<sup>2</sup>. סקירות מחקר מצביעות על כמה חסמים חוזרים<sup>2,5,6</sup>:</p>
           <div class="stack" style="gap:8px">
             ${[
-              ['בושה ופחד משיפוט.', 'החשש להיתפס כ״אמא רעה״ גורם לנשים להסתיר את מה שהן מרגישות.'],
-              ['חוסר ידע.', 'נשים רבות לא מזהות שמה שהן חוות הוא תסמינים של מצב רפואי שאפשר לטפל בו.'],
+              ['בושה ופחד משיפוט.', 'החשש להיתפס כ״אמא רעה״ גורם לנשים להסתיר את מה שהן מרגישות. במחקר אחד, כמחצית מהנשים סיפרו שבושה ופחד מהרגשות שלהן מנעו מהן לפנות.'],
+              ['חוסר ידע.', 'נשים רבות לא מזהות שמה שהן חוות הוא תסמינים של מצב רפואי שאפשר לטפל בו, ולא יודעות למי לפנות או איזה טיפול מתאים להן.'],
+              ['״זה יעבור לבד״.', 'הציפייה שהקושי יחלוף מעצמו, והרצון להתמודד לבד, הן מהסיבות הנפוצות ביותר לא לפנות.'],
               ['תגובות מבטלות.', 'בני משפחה ואפילו אנשי מקצוע לפעמים ממעטים בקושי: ״זה יעבור״, ״כולן עייפות״.'],
               ['חסמים מעשיים.', 'חוסר זמן, עלות, זמינות מטפלים, ומי ישמור על התינוק בזמן הפגישה.']
             ].map(([b, t], i) => `<div class="feature" style="padding:14px 16px;gap:12px;border-radius:18px"><span class="num soft">${i + 1}</span><span style="font-size:15px;line-height:1.55"><strong style="font-size:15px">${b}</strong> ${t}</span></div>`).join('')}
@@ -307,7 +327,7 @@
           <p class="p" style="font-size:15px;color:#3A2A30">השינויים ההורמונליים אחרי לידה אמיתיים, ומחקר הראה שחלק מהנשים רגישות במיוחד לירידה החדה באסטרוגן ובפרוגסטרון<sup>7</sup>. אבל המשפט ״זה רק ההורמונים״ משמש לא פעם כתירוץ:</p>
           <div class="stack" style="gap:8px;font-size:15px;line-height:1.55;color:#3A2A30">
             <span><strong>· כדי לבטל את הסבל:</strong> אם ״זה רק הורמונים״, לכאורה צריך רק לחכות. כך נשים מחכות חודשים בלי טיפול.</span>
-            <span><strong>· כדי להתעלם משאר הגורמים:</strong> דיכאון אחרי לידה נובע משילוב של גורמים: היסטוריה אישית, חוסר שינה, לחץ ותמיכה חלשה<sup>8,9</sup>.</span>
+            <span><strong>· כדי להתעלם משאר הגורמים:</strong> דיכאון אחרי לידה נובע משילוב של גורמים: היסטוריה אישית, חוסר שינה, לחץ ותמיכה חלשה<sup>8,9</sup>. הציבור מייחס אותו בעיקר להורמונים, אבל גורמי הסיכון החזקים שזוהו במחקר הם דיכאון או חרדה בהריון, דיכאון בעבר, אירועי חיים קשים וחוסר תמיכה, בעיקר מבן הזוג<sup>2</sup>.</span>
             <span><strong>· כדי להקטין את הרגשות של נשים:</strong> ייחוס כל רגש של אישה ל״הורמונים״ מעביר מסר שהקושי שלה פחות אמיתי.</span>
           </div>
           <p style="margin:0;font-size:15px;font-weight:700;line-height:1.55;color:#22285C">הורמונים הם חלק מהתמונה, לא סיבה לוותר על טיפול.</p>
@@ -324,7 +344,7 @@
         <a class="btn btn-primary" href="#/help">מוכנה לפנות? למציאת תמיכה</a>
         ${sources([
           'Woody CA et al. Prevalence of perinatal depression: systematic review &amp; meta-regression. J Affect Disord. 2017;219:86-92.',
-          'Daehn D et al. Perinatal mental health literacy: a systematic review. BMC Pregnancy Childbirth. 2022;22:574.',
+          'Daehn D et al. Perinatal mental health literacy: knowledge, attitudes, and help-seeking among perinatal women and the public – a systematic review. BMC Pregnancy Childbirth. 2022;22:574.',
           'Lubotzky-Gete S et al. Postpartum depression and infant development: a nationwide study (Israel). J Affect Disord. 2021;285:136-143.',
           'Klapper-Goldstein H et al. Delivery during a war and risk of postpartum depression. Arch Gynecol Obstet. 2024;310:2863-2871.',
           'Dennis CL, Chung-Lee L. PPD help-seeking barriers: a qualitative systematic review. Birth. 2006;33:323-331.',
@@ -348,6 +368,7 @@
           <div class="card" style="gap:8px;padding:16px"><span style="font-size:14px;font-weight:700;color:#4E5C2F">״בייבי בלוז״</span><span style="font-size:15px;line-height:1.5;color:#3A3550">מצבי רוח משתנים, בכי ודאגה שמתחילים ימים ספורים אחרי הלידה וחולפים תוך כשבועיים. נפוץ מאוד ואינו מחלה.</span></div>
           <div class="card" style="gap:8px;padding:16px;background:#FDD6C2;border-color:#FDD6C2"><span style="font-size:14px;font-weight:700;color:#8A3A24">דיכאון אחרי לידה</span><span style="font-size:15px;line-height:1.5;color:#3A3550">תחושות חזקות יותר, שנמשכות יותר משבועיים ומקשות לעבור את היום.</span></div>
         </div>
+        <p class="p" style="font-size:15px;padding:0 4px">רק כשליש מהאנשים יודעים שבייבי בלוז לא אמור להימשך יותר משבועיים<sup>4</sup>. אם התחושות לא חולפות, זה הזמן לפנות.</p>
         <div class="stack" style="gap:14px">
           <h2 class="h3">סימנים שכדאי לשים לב אליהם</h2>
           ${[
@@ -356,16 +377,23 @@
             ['מחשבות', 'l', ['״אני אמא רעה״', 'קושי להתרכז ולהחליט', 'קושי להרגיש קשר לתינוק', 'התרחקות מאנשים', 'אשמה וחוסר ערך']]
           ].map(([h, c, xs]) => `<div class="stack" style="gap:8px"><span style="font-size:14px;font-weight:700;color:#5E5870">${h}</span><div class="chips">${xs.map((x) => `<span class="chip ${c}">${x}</span>`).join('')}</div></div>`).join('')}
         </div>
+        <div class="card" style="gap:10px;padding:18px">
+          <strong class="t">גם בהריון, וגם חרדה</strong>
+          <span style="font-size:15px;line-height:1.6;color:#4A4560">דיכאון יכול להתחיל כבר בהריון, וחרדה בהריון ואחרי לידה שכיחה גם היא. שני אלה מוכרים הרבה פחות: בסקרים באוסטרליה, פחות מ־4% מהמשתתפים הזכירו דיכאון בהריון, ופחות מ־20% ידעו לזהות תסמינים של חרדה אחרי לידה<sup>4</sup>.</span>
+          <span style="font-size:14px;font-weight:700;color:#5E5870">סימנים לחרדה</span>
+          <div class="chips">${['דאגה מתמדת או מוגזמת', 'קושי להירגע', 'מחשבות מטרידות שחוזרות', 'התקפי פאניקה', 'תסמינים גופניים של מתח'].map((x) => `<span class="chip l">${x}</span>`).join('')}</div>
+        </div>
         <div class="navy-box">
           <strong style="font-size:17px">פני לעזרה מיד אם…</strong>
-          <span style="font-size:15px;line-height:1.6;color:#E4E2EE">יש לך מחשבות לפגוע בעצמך או בתינוק, את רואה או שומעת דברים שאחרים לא, או מרגישה שאינך מסוגלת לטפל בעצמך.</span>
+          <span style="font-size:15px;line-height:1.6;color:#E4E2EE">יש לך מחשבות לפגוע בעצמך או בתינוק, את רואה או שומעת דברים שאחרים לא, או מרגישה שאינך מסוגלת לטפל בעצמך. פסיכוזה אחרי לידה נדירה (1–2 מכל 1,000 יולדות<sup>4</sup>), אבל היא מצב חירום שדורש עזרה מיידית.</span>
           <a class="pill light" href="#/help">לעזרה עכשיו</a>
         </div>
         <a class="btn btn-outline" href="#/assessment">למילוי ההערכה הראשונית</a>
         ${sources([
           'Woody CA et al. J Affect Disord. 2017;219:86-92.',
           'ACOG Clinical Practice Guideline No. 4: Screening and diagnosis of mental health conditions during pregnancy and postpartum. Obstet Gynecol. 2023;141:1232-1261.',
-          'O’Hara MW, McCabe JE. Postpartum depression: current status and future directions. Annu Rev Clin Psychol. 2013;9:379-407.'
+          'O’Hara MW, McCabe JE. Postpartum depression: current status and future directions. Annu Rev Clin Psychol. 2013;9:379-407.',
+          'Daehn D et al. Perinatal mental health literacy: a systematic review. BMC Pregnancy Childbirth. 2022;22:574.'
         ])}`
     },
 
@@ -383,13 +411,18 @@
           <div class="feature"><span class="ic" style="background:#EEF1E4">${ico.dna}</span><div><strong>היסטוריה אישית ותורשה</strong><p>דיכאון או חרדה בעבר או במהלך ההריון, וגם היסטוריה משפחתית, הם מגורמי הסיכון החזקים ביותר<sup>3</sup>.</p></div></div>
           <div class="feature"><span class="ic" style="background:#F1EEF6">${ico.home}</span><div><strong>נסיבות חיים ותמיכה</strong><p>אירועי חיים מלחיצים, תמיכה חברתית חלשה וקשיים בזוגיות מעלים את הסיכון<sup>3</sup>. גם מצב ביטחוני: מחקר ישראלי מצא שלידה בזמן מלחמה הכפילה את הסיכון לדיכאון אחרי לידה<sup>4</sup>.</p></div></div>
         </div>
+        <div class="sage-box">
+          <strong style="font-size:16px">מה חושבים, ומה המחקר מראה</strong>
+          <span style="font-size:15px;line-height:1.55">הציבור מייחס דיכאון אחרי לידה בעיקר להורמונים, ונשים עצמן מציינות לרוב חוסר תמיכה. המחקר מצביע על גורמי הסיכון החזקים ביותר: דיכאון או חרדה בהריון, דיכאון בעבר, אירועי חיים קשים וחוסר תמיכה, בעיקר מבן הזוג<sup>5</sup>. כלומר, יש גורמים שאפשר לזהות מראש, כבר בהריון.</span>
+        </div>
         <div class="peach-box" style="text-align:center"><p style="margin:0;font-family:var(--serif);font-size:21px;line-height:1.45">זה לא משהו שעשית,<br>וזה לא באשמתך.</p></div>
         <a class="btn btn-primary" href="#/treatment">איך מטפלים בזה?</a>
         ${sources([
           'Stewart DE, Vigod SN. Annu Rev Med. 2019;70:183-196.',
           'Bloch M et al. Am J Psychiatry. 2000;157:924-930.',
           'Robertson E et al. Antenatal risk factors for postpartum depression: a synthesis of recent literature. Gen Hosp Psychiatry. 2004;26:289-295.',
-          'Klapper-Goldstein H et al. Arch Gynecol Obstet. 2024;310:2863-2871.'
+          'Klapper-Goldstein H et al. Arch Gynecol Obstet. 2024;310:2863-2871.',
+          'Daehn D et al. Perinatal mental health literacy: a systematic review. BMC Pregnancy Childbirth. 2022;22:574.'
         ])}`
     },
 
@@ -417,6 +450,14 @@
               ${i === 3 ? '<a href="#/resources" style="align-self:flex-start;display:flex;align-items:center;min-height:44px;font-size:15px;font-weight:700;color:#8A3A24">לטיפים לטיפול עצמי ←</a>' : ''}
             </div>`).join('')}
         </div>
+        <div class="peach-box stack" style="gap:8px">
+          <h2 class="h3">תמיכה מהקרובים: חשובה, אבל לא לבד</h2>
+          <p class="p" style="font-size:15px;color:#3A2A30">רוב הנשים פונות קודם לבן הזוג, למשפחה ולחברים. זה חשוב, אבל דיכאון אחרי לידה דורש לרוב גם טיפול מקצועי<sup>5</sup>. הקרובים יכולים להיות הגשר: עידוד מבן הזוג או מאשת מקצוע הוא מהדברים שהכי עוזרים לנשים להתחיל טיפול.</p>
+        </div>
+        <div class="card" style="gap:6px;padding:18px">
+          <strong class="t">מותר לך להעדיף</strong>
+          <span style="font-size:15px;line-height:1.6;color:#4A4560">טיפול בשיחות הוא הטיפול המועדף על רוב הנשים, אבל ההעדפות משתנות: במחקר אחד, נשים בהריון העדיפו טיפול אישי בשיחות, נשים מניקות העדיפו מדיטציה, יוגה או פעילות גופנית, ונשים שאינן מניקות העדיפו שילוב של שיחות ותרופות<sup>5</sup>. ספרי לאשת המקצוע מה חשוב לך.</span>
+        </div>
         <div class="sage-box"><strong style="font-size:16px">בישראל</strong><span style="font-size:15px;line-height:1.55">טיפול נפשי ניתן דרך קופות החולים. אפשר להתחיל מרופאת המשפחה או מהאחות בטיפת חלב, שיפנו אותך להמשך.</span></div>
         <p class="small" style="padding:0 4px">המידע כאן כללי. התאמת הטיפול נעשית תמיד עם איש או אשת מקצוע.</p>
         <a class="btn btn-primary" href="#/help">צעד ראשון: למציאת תמיכה</a>
@@ -424,7 +465,8 @@
           'Stewart DE, Vigod SN. Postpartum depression: pathophysiology, treatment, and emerging therapeutics. Annu Rev Med. 2019;70:183-196.',
           'US Preventive Services Task Force (Curry SJ et al.). Interventions to prevent perinatal depression. JAMA. 2019;321:580-587.',
           'Dennis CL, Chung-Lee L. Birth. 2006;33:323-331.',
-          'Deligiannidis KM et al. Zuranolone for the treatment of postpartum depression. Am J Psychiatry. 2023;180:668-675.'
+          'Deligiannidis KM et al. Zuranolone for the treatment of postpartum depression. Am J Psychiatry. 2023;180:668-675.',
+          'Daehn D et al. Perinatal mental health literacy: a systematic review. BMC Pregnancy Childbirth. 2022;22:574.'
         ])}`
     },
 
