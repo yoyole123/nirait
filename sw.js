@@ -1,5 +1,5 @@
 /* Service worker: precache the app shell, cache Google Fonts at runtime. */
-const VERSION = 'nirait-v2';
+const VERSION = 'nirait-v3';
 const SHELL = [
   './', './index.html', './styles.css', './app.js', './manifest.webmanifest',
   './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png', './icons/apple-touch-icon.png', './icons/favicon-32.png',
@@ -35,9 +35,14 @@ self.addEventListener('fetch', (e) => {
 
   if (url.origin !== location.origin) return;
 
-  // Navigations: network first, fall back to cached shell (offline)
+  // Navigations: serve the cached shell at once (a hung network can't stall launch), refresh it in the background
   if (req.mode === 'navigate') {
-    e.respondWith(fetch(req).catch(() => caches.match('./index.html')));
+    const net = fetch(req).then((res) => {
+      if (res.ok) { const copy = res.clone(); caches.open(VERSION).then((c) => c.put('./index.html', copy)); }
+      return res;
+    });
+    e.waitUntil(net.catch(() => {}));
+    e.respondWith(caches.match('./index.html').then((hit) => hit || net));
     return;
   }
 
