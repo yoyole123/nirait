@@ -94,7 +94,10 @@ sup { font-size: 0.7em; line-height: 0; }
 .brand img { width: 117px; height: 204px; }
 .brand h1 { margin: 4px 0 0; font-family: var(--serif); font-weight: 500; font-size: 44px; line-height: 1; }
 .brand .tag { margin: 0; font-size: 14px; font-weight: 700; letter-spacing: .5px; color: var(--sage); }
-.brand .intro { margin: 6px 0 0; font-size: 16px; line-height: 1.6; color: var(--text); text-wrap: pretty; }
+.brand .intro { align-self: stretch; margin: 8px -8px 0; display: flex; flex-direction: column; gap: 10px; color: var(--text); text-align: start; }
+.brand .intro p { margin: 0; font-size: 15.5px; line-height: 1.55; text-wrap: pretty; }
+.brand .intro span { display: block; }
+.brand .intro .invite { margin-top: 10px; padding-top: 18px; border-top: 1px solid var(--line); font-weight: 600; color: #4E5C2F; }
 
 .tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .tile {
