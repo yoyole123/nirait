@@ -93,14 +93,14 @@
 
   /* ---------- Views ---------- */
   const TILES = [
+    ['causes', 'causes.jpg', 'גורמים', '', 'object-position:center 40%'],
+    ['symptoms', 'symptoms.jpg', 'סימפטומים', '', 'object-position:center 22%'],
     ['video', 'video.jpg', 'סרטונים', ''],
     ['assessment', 'assess.jpg', 'הערכה ראשונית', ''],
-    ['help', 'help.jpg', 'סיוע', ''],
     ['information', 'info.jpg', 'מידע וניפוץ סטיגמות', 'font-size:16px'],
-    ['treatment', 'treat.jpg', 'טיפול', ''],
     ['resources', 'res.jpg', 'משאבים', ''],
-    ['symptoms', 'symptoms.jpg', 'סימפטומים', '', 'object-position:center 22%'],
-    ['causes', 'causes.jpg', 'גורמים', '', 'object-position:center 40%']
+    ['help', 'help.jpg', 'סיוע', ''],
+    ['treatment', 'treat.jpg', 'טיפול', '']
   ];
 
   const views = {
