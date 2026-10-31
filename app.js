@@ -33,6 +33,7 @@
   /* ---------- State ---------- */
   const state = {
     videoSel: 0,
+    videoPlaying: false,
     quiz: { step: -1, answers: [] },
     mythOpen: 0,
     tips: loadTips()
@@ -46,12 +47,13 @@
   function saveTips() { try { localStorage.setItem(todayKey(), JSON.stringify(state.tips)); } catch (e) {} }
 
   /* ---------- Data ---------- */
+  // YouTube video ids; the player is only loaded when the user presses play
   const VIDEOS = [
-    { title: 'מהו דיכאון אחרי לידה?', tag: 'היכרות ראשונה', desc: 'הסבר עדין על דיכאון אחרי לידה, כמה הוא שכיח ובמה הוא שונה מ״בייבי בלוז״.', src: '' },
-    { title: 'בייבי בלוז או משהו יותר?', tag: 'לזהות את הסימנים', desc: 'איך להבחין בין תנודות רגילות לבין תחושות שזקוקות לטיפול.', src: '' },
-    { title: 'אמהות משתפות', tag: 'את לא לבד', desc: 'סיפורים אמיתיים של אמהות שהרגישו רע אחרי הלידה, פנו לעזרה והחלימו.', src: '' },
-    { title: 'לדבר עם בן או בת הזוג', tag: 'למשפחה', desc: 'איך לפתוח את השיחה ומה יכולים הקרובים לעשות כדי לעזור.', src: '' },
-    { title: 'נשימה מרגיעה, יחד', tag: 'תרגול מודרך', desc: 'תרגיל נשימה קצר לרגעים שמרגישים כבדים.', src: '' }
+    { id: '4Xg0aBAmaEQ', title: 'סליחה על השאלה: דיכאון אחרי לידה', tag: 'כאן 11 · עברית', desc: 'פרק מהסדרה ״סליחה על השאלה״ של כאן 11 (עונה 4), שעוסק בדיכאון אחרי לידה.' },
+    { id: '9p2bh5Tg-Sc', title: '״אחרי הלידה הרגשתי מתה״', tag: 'כאן מקשיבים · עברית', desc: 'עדות אישית מתוך ״כאן מקשיבים״: ״אחרי הלידה הרגשתי מתה, שום דבר לא עניין אותי״.' },
+    { id: 'Wfc_ECXG1IE', title: 'למה אחרי הלידה את לא מרגישה כמו עצמך', tag: 'Diana In The Pink · באנגלית', desc: 'הסבר על דיכאון אחרי לידה, ועל התחושה שאת כבר ״לא את עצמך״ אחרי הלידה.' },
+    { id: 'P4V5KqGWrnA', title: 'דיכאון אחרי לידה: הנפילה הרגשית שאחרי הלידה', tag: 'The Science of Humans · באנגלית', desc: 'הסבר על דיכאון אחרי לידה ועל הנפילה הרגשית שיכולה להגיע אחרי הלידה.' },
+    { id: 'ocTk-Tyi_7A', title: 'איך האמהות שברה אותי', tag: 'הרצאת TEDx · באנגלית', desc: 'נישמה כרים מספרת בהרצאת TEDx על החוויה האישית שלה עם האמהות.' }
   ];
 
   const PHQ_LEAD = 'באיזו תדירות הטריד אותך:';
@@ -136,12 +138,13 @@
         ${topbar('סרטונים')}
         <div class="stack" style="gap:14px">
           <div class="player">
-            <img src="images/video.jpg" alt="">
-            <button class="play" data-action="play" aria-label="הפעלת הסרטון">${ico.play(26, '#B44A30')}</button>
-            <div class="bar"></div>
+            ${state.videoPlaying
+              ? `<iframe src="https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0&playsinline=1" title="${v.title}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`
+              : `<img src="https://i.ytimg.com/vi/${v.id}/hqdefault.jpg" alt="" onerror="this.onerror=null;this.src='images/video.jpg'">
+            <button class="play" data-action="play" aria-label="הפעלת הסרטון: ${v.title}">${ico.play(26, '#B44A30')}</button>`}
           </div>
           <div class="stack" style="gap:4px;padding:0 4px">
-            <p style="margin:0;font-size:13px;font-weight:700;color:#5B6B3A">מתנגן עכשיו · ${state.videoSel + 1} מתוך ${VIDEOS.length}</p>
+            <p style="margin:0;font-size:13px;font-weight:700;color:#5B6B3A">${state.videoPlaying ? 'מתנגן עכשיו' : 'סרטון'} · ${state.videoSel + 1} מתוך ${VIDEOS.length}</p>
             <h2 class="h3" style="line-height:1.3">${v.title}</h2>
             <p class="p" style="font-size:15px">${v.desc}</p>
           </div>
@@ -528,8 +531,10 @@
     const i = Number(el.dataset.i);
     const q = state.quiz;
     switch (el.dataset.action) {
-      case 'video': state.videoSel = i; render(); break;
-      case 'play': toast('הסרטונים יתווספו בקרוב'); break;
+      case 'video': state.videoSel = i; state.videoPlaying = false; render(); break;
+      case 'play':
+        if (!navigator.onLine) { toast('כדי לצפות בסרטונים צריך חיבור לאינטרנט'); break; }
+        state.videoPlaying = true; render(); break;
       case 'quiz-start': state.quiz = { step: 0, answers: [] }; render({ navigated: true }); break;
       case 'quiz-pick': q.answers[q.step] = i; render(); focusSel('.opt[aria-checked="true"]'); break;
       case 'quiz-next': if (q.answers[q.step] !== undefined) { q.step++; render({ navigated: true }); } break;

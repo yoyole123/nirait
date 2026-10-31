@@ -22,7 +22,6 @@ To try it on your phone, run the server on your computer and open `http://<your-
 - `images/` – illustrations and logo
 
 ## Before launch
-- Video list in `app.js` (`VIDEOS`) has placeholder titles; add a `src` for each video.
 - Use the official Hebrew PHQ-9 wording from phqscreeners.com.
 - Have a clinician review the medical content; verify the phone numbers on the Help screen.
 - Bump `VERSION` in `sw.js` whenever you deploy changes, so users get the update.
