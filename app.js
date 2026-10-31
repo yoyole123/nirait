@@ -112,8 +112,8 @@
           <button class="pill install" data-action="install" hidden>${ico.download} התקנה</button>
         </div>
         <div class="brand">
-          <img src="images/logo.png" alt="לוגו נראית: קו מתאר של אישה בהריון מחבקת תינוק, ומעליה ענן" width="117" height="204">
-          <h1>נראית</h1>
+          <img src="images/logo.png" alt="לוגו נראית: קו מתאר של אישה בהריון מחבקת תינוק, ומעליה ענן ובו השם נראית" width="153" height="260">
+          <h1 class="sr-only">נראית</h1>
           <p class="tag">ליווי רגשי בהריון ואחרי לידה</p>
           <div class="intro">
             <p>
